@@ -68,13 +68,13 @@ Suggested commit: `feat: identify recurring incident patterns`
 
 Goal: simulate the human-facing triage and review layer that would happen in Codex App.
 
-- [ ] Define the incident-pattern brief format.
-- [ ] Generate a concise brief for the selected cluster.
-- [ ] Include facts, ticket evidence, suspected stale documentation, and recommended next actions.
-- [ ] Cite ticket IDs or filenames for every major claim.
-- [ ] Separate facts from recommendations.
-- [ ] Save the brief as a review artifact under `reviews/`.
-- [ ] Add a sample completed brief for the demo path.
+- [x] Define the incident-pattern brief format.
+- [x] Generate a concise brief for the selected cluster.
+- [x] Include facts, ticket evidence, suspected stale documentation, and recommended next actions.
+- [x] Cite ticket IDs or filenames for every major claim.
+- [x] Separate facts from recommendations.
+- [x] Save the brief as a review artifact under `reviews/`.
+- [x] Add a sample completed brief for the demo path.
 
 Suggested commit: `feat: generate incident pattern brief`
 
