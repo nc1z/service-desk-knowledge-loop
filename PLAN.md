@@ -124,13 +124,13 @@ Suggested commit: `feat: draft knowledge base article`
 
 Goal: produce the enterprise review packet that explains what changed and why.
 
-- [ ] Generate a handoff file under `reviews/`.
-- [ ] List changed files with short summaries.
-- [ ] Include rationale tied to ticket evidence.
-- [ ] Include risks, assumptions, and verification steps.
-- [ ] Clearly separate facts, recommendations, and required human approvals.
-- [ ] State that no production scripts were executed.
-- [ ] Include next steps for service desk lead and operations owner review.
+- [x] Generate a handoff file under `reviews/`.
+- [x] List changed files with short summaries.
+- [x] Include rationale tied to ticket evidence.
+- [x] Include risks, assumptions, and verification steps.
+- [x] Clearly separate facts, recommendations, and required human approvals.
+- [x] State that no production scripts were executed.
+- [x] Include next steps for service desk lead and operations owner review.
 
 Suggested commit: `feat: create reviewer handoff packet`
 

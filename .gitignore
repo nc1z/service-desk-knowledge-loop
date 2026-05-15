@@ -29,6 +29,7 @@ reviews/*
 !reviews/incident-pattern-brief-*.md
 !reviews/runbook-update-record.md
 !reviews/support-script-update-record.md
+!reviews/reviewer-handoff-vpn-login-failures.md
 kb/*
 !kb/.gitkeep
 !kb/README.md
