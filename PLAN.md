@@ -40,13 +40,13 @@ Suggested commit: `test: add synthetic service desk fixtures`
 
 Goal: load local ticket files into structured records with clear validation errors.
 
-- [ ] Define the ticket schema used by the POC.
-- [ ] Support ingesting ticket files from `tickets/`.
-- [ ] Normalize ticket fields such as ID, system, symptom, resolver action, and timestamps.
-- [ ] Validate required fields and report malformed fixtures without crashing.
-- [ ] Add a CLI or script command for running ingestion.
-- [ ] Print an ingest summary with ticket count and invalid-file count.
-- [ ] Add tests covering valid tickets, missing fields, and unsupported files.
+- [x] Define the ticket schema used by the POC.
+- [x] Support ingesting ticket files from `tickets/`.
+- [x] Normalize ticket fields such as ID, system, symptom, resolver action, and timestamps.
+- [x] Validate required fields and report malformed fixtures without crashing.
+- [x] Add a CLI or script command for running ingestion.
+- [x] Print an ingest summary with ticket count and invalid-file count.
+- [x] Add tests covering valid tickets, missing fields, and unsupported files.
 
 Suggested commit: `feat: ingest synthetic incident tickets`
 

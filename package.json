@@ -10,7 +10,9 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "tsc --noEmit && vite build",
+    "ingest:tickets": "node scripts/ingest-tickets.mjs",
     "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "format": "prettier --write .",

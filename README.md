@@ -18,9 +18,11 @@ flowchart LR
 
 ```bash
 pnpm install
+pnpm ingest:tickets
+pnpm test
 pnpm dev
 pnpm build
 pnpm preview
 ```
 
-TODO: add supported local commands for ingestion, demo simulation, reset, and replay.
+TODO: add supported local commands for full demo simulation, reset, and replay.
