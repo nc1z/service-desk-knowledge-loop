@@ -184,13 +184,13 @@ Suggested commit: `chore: add reset and demo replay workflow`
 
 Goal: make the POC easy to present to an enterprise audience.
 
-- [ ] Add a `docs/demo-script.md` with a 5-8 minute talk track.
-- [ ] Explain where Codex App is used for triage, summarization, and review.
-- [ ] Explain where Codex CLI is used for repository edits and validation.
-- [ ] Add a production architecture note covering ITSM connectors, repo integration, identity, audit logging, CI, and KB publishing.
-- [ ] Add a safety note covering no production execution, human approval, data minimization, and review records.
-- [ ] Add screenshots or screen-capture instructions for the monitoring UI.
-- [ ] Add a final acceptance checklist that mirrors the PRD.
+- [x] Add a `docs/demo-script.md` with a 5-8 minute talk track.
+- [x] Explain where Codex App is used for triage, summarization, and review.
+- [x] Explain where Codex CLI is used for repository edits and validation.
+- [x] Add a production architecture note covering ITSM connectors, repo integration, identity, audit logging, CI, and KB publishing.
+- [x] Add a safety note covering no production execution, human approval, data minimization, and review records.
+- [x] Add screenshots or screen-capture instructions for the monitoring UI.
+- [x] Add a final acceptance checklist that mirrors the PRD.
 
 Suggested commit: `docs: add enterprise demo narrative`
 
