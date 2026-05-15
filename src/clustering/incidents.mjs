@@ -8,13 +8,12 @@ export function clusterTickets(tickets) {
   const grouped = new Map();
 
   for (const ticket of tickets) {
-    const symptomSignal = normalizeSignal(ticket.symptom);
     const resolverActionSignal = extractPrimaryResolverAction(
       ticket.resolverAction,
     );
     const groupingKey = [
       normalizeSignal(ticket.affectedSystem),
-      symptomSignal,
+      normalizeSignal(ticket.symptom),
       normalizeSignal(resolverActionSignal),
     ].join("|");
 
@@ -64,8 +63,7 @@ export function clusterTickets(tickets) {
 
 export async function writeClusterOutput(outputPath, output) {
   await mkdir(path.dirname(outputPath), { recursive: true });
-  const serialized = `${JSON.stringify(output, null, 2)}\n`;
-  await writeFile(outputPath, serialized, "utf8");
+  await writeFile(outputPath, `${JSON.stringify(output, null, 2)}\n`, "utf8");
 }
 
 function summarizeCluster(group) {
@@ -106,15 +104,15 @@ function calculateEvidenceQuality(tickets) {
     tickets,
     (ticket) => ticket.comments.length >= 2,
   );
-  const withEvidenceNotes = ratio(
+  const withRawEvidence = ratio(
     tickets,
-    (ticket) => ticket.evidenceNotes.length > 0,
+    (ticket) => ticket.symptom.length > 0 && ticket.resolverAction.length > 0,
   );
 
   return Math.round(
     (withDescriptions * 0.3 +
       withCommentHistory * 0.4 +
-      withEvidenceNotes * 0.3) *
+      withRawEvidence * 0.3) *
       100,
   );
 }
@@ -225,7 +223,7 @@ function extractPrimaryResolverAction(resolverAction) {
     return "orphaned secure-print job";
   }
 
-  return resolverAction.split(/,|\sand\s/)[0].trim();
+  return resolverAction.split(",")[0].trim();
 }
 
 function summarizePhrase(value, wordLimit) {
