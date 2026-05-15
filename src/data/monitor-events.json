@@ -1,0 +1,124 @@
+{
+  "title": "Service Desk Knowledge Loop Monitor",
+  "summary": "A replayable local view of synthetic tickets becoming a reviewed knowledge-base draft without rerunning the pipeline.",
+  "nodes": [
+    {
+      "id": "incident-tickets",
+      "label": "Incident Tickets",
+      "detail": "16 synthetic incidents with repeated VPN, password, and printer patterns."
+    },
+    {
+      "id": "codex-app",
+      "label": "Codex App",
+      "detail": "Clusters recurring evidence and prepares a support-lead brief."
+    },
+    {
+      "id": "codex-cli",
+      "label": "Codex CLI",
+      "detail": "Applies scoped local repo edits and validation checks."
+    },
+    {
+      "id": "runbook-repo",
+      "label": "Runbook Repo",
+      "detail": "Receives the VPN login failures runbook update."
+    },
+    {
+      "id": "support-scripts",
+      "label": "Support Scripts",
+      "detail": "Receives a dry-run helper script change for local validation."
+    },
+    {
+      "id": "knowledge-base",
+      "label": "Knowledge Base",
+      "detail": "Collects reviewed runbook and script context into an agent article."
+    }
+  ],
+  "tickets": [
+    {
+      "id": "INC-2026-0001",
+      "system": "VPN",
+      "symptom": "Token refresh loop after MFA",
+      "cluster": "VPN login failures"
+    },
+    {
+      "id": "INC-2026-0002",
+      "system": "VPN",
+      "symptom": "Session rejected after token refresh",
+      "cluster": "VPN login failures"
+    },
+    {
+      "id": "INC-2026-0003",
+      "system": "VPN",
+      "symptom": "MFA completes but tunnel never opens",
+      "cluster": "VPN login failures"
+    },
+    {
+      "id": "INC-2026-0004",
+      "system": "VPN",
+      "symptom": "Token refresh succeeds only after cache clear",
+      "cluster": "VPN login failures"
+    }
+  ],
+  "patternBrief": {
+    "title": "Pattern brief: VPN token refresh failures",
+    "confidence": "High confidence recurring cluster",
+    "facts": [
+      "4 VPN tickets share token refresh failure after successful MFA.",
+      "Resolver notes repeatedly cite stale local session state.",
+      "A similar network false positive was excluded from the cluster."
+    ],
+    "recommendation": "Update the VPN runbook, add a dry-run session check, and draft a service-desk KB article for review."
+  },
+  "fileChanges": [
+    {
+      "path": "runbooks/vpn-login-failures.md",
+      "summary": "Adds current symptoms, triage steps, escalation notes, and ticket evidence."
+    },
+    {
+      "path": "scripts/check-vpn-session-demo.mjs",
+      "summary": "Keeps dry-run behavior by default and reports local sample validation output."
+    }
+  ],
+  "knowledgeBase": {
+    "path": "kb/vpn-login-failures.md",
+    "summary": "Agent-facing draft with symptoms, likely cause, steps, user wording, and escalation triggers."
+  },
+  "timeline": [
+    {
+      "id": "ingesting",
+      "label": "Ingesting",
+      "detail": "Load local ticket fixtures"
+    },
+    {
+      "id": "clustering",
+      "label": "Clustering",
+      "detail": "Group repeated support signals"
+    },
+    {
+      "id": "briefing",
+      "label": "Briefing",
+      "detail": "Codex App prepares pattern brief"
+    },
+    {
+      "id": "editing",
+      "label": "Editing",
+      "detail": "Codex CLI changes runbook and script"
+    },
+    {
+      "id": "validating",
+      "label": "Validating",
+      "detail": "Local checks confirm scoped updates"
+    },
+    {
+      "id": "ready-for-review",
+      "label": "Ready for review",
+      "detail": "Reviewer packet and KB draft converge"
+    }
+  ],
+  "counters": {
+    "ticketCount": 16,
+    "clusterCount": 3,
+    "filesChanged": 2,
+    "reviewStatus": "Ready"
+  }
+}

@@ -13,6 +13,6 @@ const outputPath = process.argv[2] ?? reviewerHandoffPath;
 const handoff = buildReviewerHandoff();
 
 await mkdir(dirname(outputPath), { recursive: true });
-await writeFile(outputPath, handoff);
+await writeFile(outputPath, handoff, "utf8");
 
 console.log(`Wrote reviewer handoff: ${outputPath}`);

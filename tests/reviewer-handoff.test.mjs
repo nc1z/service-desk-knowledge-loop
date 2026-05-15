@@ -32,20 +32,20 @@ test("reviewer handoff lists changed files and evidence rationale", () => {
     assert.match(handoff, new RegExp(escapeRegExp(changedFile)));
   }
 
-  assert.match(handoff, /INC-2026-0001 through INC-2026-0004/);
-  assert.match(handoff, /INC-2026-0013 proves the workflow needs a guardrail/);
+  assert.match(handoff, /INC-2026-0001[\s\S]*INC-2026-0004/);
+  assert.match(handoff, /false-positive guardrail/i);
 });
 
 test("reviewer handoff preserves safety and approval boundaries", () => {
   const handoff = buildReviewerHandoff();
 
   assert.match(handoff, /No production scripts were executed/);
-  assert.match(handoff, /No credentials, live ITSM systems/);
+  assert.match(handoff, /No credentials, real tickets, live ITSM records/);
   assert.match(
     handoff,
     /Observed locally on 2026-05-15: all commands below passed/,
   );
-  assert.match(handoff, /not an auto-publish or auto-remediation workflow/);
+  assert.match(handoff, /do not auto-publish the KB article/);
   assert.match(handoff, /Service desk lead approval is required/);
   assert.match(handoff, /Operations owner approval is required/);
   assert.doesNotMatch(handoff, /we executed production scripts/i);
@@ -62,6 +62,7 @@ test("reviewer handoff includes executable verification steps", () => {
     "pnpm validate:runbooks",
     "pnpm check:vpn-demo",
     "pnpm draft:kb",
+    "pnpm handoff:review",
     "pnpm test",
   ]) {
     assert.match(handoff, new RegExp(escapeRegExp(command)));

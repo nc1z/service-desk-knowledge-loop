@@ -138,17 +138,17 @@ Suggested commit: `feat: create reviewer handoff packet`
 
 Goal: show the end-to-end knowledge loop in a replayable local UI.
 
-- [ ] Create local mock event data loaded from JSON.
-- [ ] Build the main monitoring layout with nodes for Incident Tickets, Codex App, Codex CLI, Runbook Repo, Support Scripts, and Knowledge Base.
-- [ ] Animate ticket cards flowing from Incident Tickets to Codex App.
-- [ ] Show Codex App producing the pattern brief.
-- [ ] Animate the handoff from Codex App to Codex CLI.
-- [ ] Show file-change pulses for Runbook Repo and Support Scripts.
-- [ ] Animate both outputs converging into Knowledge Base.
-- [ ] Add a timeline with states: ingesting, clustering, briefing, editing, validating, ready for review.
-- [ ] Add counters for ticket count, cluster count, files changed, and review status.
-- [ ] Add replay controls that do not rerun the pipeline.
-- [ ] Verify the UI works on desktop and mobile viewports.
+- [x] Create local mock event data loaded from JSON.
+- [x] Build the main monitoring layout with nodes for Incident Tickets, Codex App, Codex CLI, Runbook Repo, Support Scripts, and Knowledge Base.
+- [x] Animate ticket cards flowing from Incident Tickets to Codex App.
+- [x] Show Codex App producing the pattern brief.
+- [x] Animate the handoff from Codex App to Codex CLI.
+- [x] Show file-change pulses for Runbook Repo and Support Scripts.
+- [x] Animate both outputs converging into Knowledge Base.
+- [x] Add a timeline with states: ingesting, clustering, briefing, editing, validating, ready for review.
+- [x] Add counters for ticket count, cluster count, files changed, and review status.
+- [x] Add replay controls that do not rerun the pipeline.
+- [x] Verify the UI works on desktop and mobile viewports.
 
 Suggested commit: `feat: add animated knowledge loop monitor`
 
