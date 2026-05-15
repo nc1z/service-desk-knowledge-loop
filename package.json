@@ -15,6 +15,8 @@
     "build": "tsc --noEmit && vite build",
     "check:vpn-demo": "node scripts/check-vpn-session-demo.mjs --ticket INC-2026-0001 --stage after-mfa",
     "draft:kb": "node scripts/generate-kb-draft.mjs",
+    "eval:service-desk-loop": "node scripts/eval-service-desk-loop.mjs",
+    "eval:poc": "node scripts/eval-service-desk-loop.mjs",
     "handoff:review": "node scripts/generate-reviewer-handoff.mjs",
     "ingest:tickets": "node scripts/ingest-tickets.mjs",
     "preview": "vite preview --host 127.0.0.1",

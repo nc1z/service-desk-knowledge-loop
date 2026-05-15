@@ -156,14 +156,14 @@ Suggested commit: `feat: add animated knowledge loop monitor`
 
 Goal: make the demo measurable and protect against hallucinated or unsafe outputs.
 
-- [ ] Add an eval command that runs against golden fixtures.
-- [ ] Check whether the correct recurring pattern is selected.
-- [ ] Check whether runbook changes cite the expected ticket evidence.
-- [ ] Check whether support script changes are scoped and non-destructive.
-- [ ] Check whether the KB draft contains clear agent-facing instructions.
-- [ ] Penalize hallucinated systems, missing ticket references, and production execution claims.
-- [ ] Include the false-positive trap in automated checks.
-- [ ] Print a pass/fail summary suitable for demo narration.
+- [x] Add an eval command that runs against golden fixtures.
+- [x] Check whether the correct recurring pattern is selected.
+- [x] Check whether runbook changes cite the expected ticket evidence.
+- [x] Check whether support script changes are scoped and non-destructive.
+- [x] Check whether the KB draft contains clear agent-facing instructions.
+- [x] Penalize hallucinated systems, missing ticket references, and production execution claims.
+- [x] Include the false-positive trap in automated checks.
+- [x] Print a pass/fail summary suitable for demo narration.
 
 Suggested commit: `test: add service desk knowledge loop evals`
 
