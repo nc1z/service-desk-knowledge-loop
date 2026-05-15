@@ -96,13 +96,13 @@ Suggested commit: `feat: update runbook from incident evidence`
 
 Goal: simulate a safe script patch that supports service desk work without taking production action.
 
-- [ ] Decide whether the demo should patch an existing script or create a new one for the selected pattern.
-- [ ] Add a dry-run mode by default.
-- [ ] Add clear input validation and harmless sample output.
-- [ ] Add comments or help text explaining that the script is for local/demo use only.
-- [ ] Add rollback or manual recovery notes where appropriate.
-- [ ] Add tests for dry-run behavior and non-destructive defaults.
-- [ ] Record the changed script path in the review output.
+- [x] Decide whether the demo should patch an existing script or create a new one for the selected pattern.
+- [x] Add a dry-run mode by default.
+- [x] Add clear input validation and harmless sample output.
+- [x] Add comments or help text explaining that the script is for local/demo use only.
+- [x] Add rollback or manual recovery notes where appropriate.
+- [x] Add tests for dry-run behavior and non-destructive defaults.
+- [x] Record the changed script path in the review output.
 
 Suggested commit: `feat: patch safe support script for recurring issue`
 

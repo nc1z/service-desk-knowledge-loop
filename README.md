@@ -22,6 +22,7 @@ pnpm ingest:tickets
 pnpm cluster:incidents
 pnpm brief:pattern
 pnpm validate:runbooks
+pnpm check:vpn-demo
 pnpm test
 pnpm dev
 pnpm build
