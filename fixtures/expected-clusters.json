@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "description": "Expected synthetic incident groupings for the Service Desk Knowledge Loop POC.",
+  "preferredDemoPattern": "vpn-login-failures",
+  "clusters": [
+    {
+      "id": "vpn-login-failures",
+      "label": "VPN login failures after MFA token refresh",
+      "affectedSystem": "GlobalProtect VPN",
+      "expectedTicketIds": [
+        "INC-2026-0001",
+        "INC-2026-0002",
+        "INC-2026-0003",
+        "INC-2026-0004"
+      ],
+      "recurrenceSignals": [
+        "Authentication failed after MFA approval",
+        "stale VPN authentication token",
+        "resolver clears token cache or refreshes IdP session"
+      ],
+      "expectedRunbook": "runbooks/vpn-login-failures.md",
+      "expectedSupportScript": "scripts/check-vpn-session-demo.mjs"
+    },
+    {
+      "id": "password-reset-loops",
+      "label": "Password reset loops after successful reset",
+      "affectedSystem": "Okta Workforce Identity",
+      "expectedTicketIds": [
+        "INC-2026-0005",
+        "INC-2026-0006",
+        "INC-2026-0007",
+        "INC-2026-0008"
+      ],
+      "recurrenceSignals": [
+        "password reset completes",
+        "password-expired flag remains set",
+        "resolver clears expired flag and invalidates stale sessions"
+      ],
+      "expectedRunbook": "runbooks/password-reset-loops.md",
+      "expectedSupportScript": "scripts/check-password-reset-demo.mjs"
+    },
+    {
+      "id": "printer-queue-stalls",
+      "label": "Printer queue stalls behind held secure-print jobs",
+      "affectedSystem": "PaperCut Print Queue",
+      "expectedTicketIds": [
+        "INC-2026-0009",
+        "INC-2026-0010",
+        "INC-2026-0011",
+        "INC-2026-0012"
+      ],
+      "recurrenceSignals": [
+        "jobs queued but nothing prints",
+        "held secure-print job blocks queue",
+        "resolver removes orphaned job and restarts local spooler"
+      ],
+      "expectedRunbook": "runbooks/printer-queue-stalls.md",
+      "expectedSupportScript": "scripts/check-printer-queue-demo.mjs"
+    }
+  ],
+  "falsePositiveTraps": [
+    {
+      "ticketId": "INC-2026-0013",
+      "similarTo": "vpn-login-failures",
+      "reasonToExclude": "VPN failure occurs before MFA and is resolved by SSL fallback for a home ISP UDP tunnel issue."
+    },
+    {
+      "ticketId": "INC-2026-0014",
+      "similarTo": "password-reset-loops",
+      "reasonToExclude": "Password reset prompt is caused by an intentional security hold after phishing review, not a stuck expired-password flag."
+    }
+  ],
+  "noiseTickets": ["INC-2026-0015", "INC-2026-0016"]
+}

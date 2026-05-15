@@ -23,16 +23,16 @@ Suggested commit: `chore: scaffold service desk knowledge loop poc`
 Goal: create synthetic enterprise-like inputs that make the demo repeatable without using real tickets or credentials.
 
 - [x] Create `tickets/` with 12-20 synthetic incident tickets.
-- [ ] Include at least three repeated issue clusters:
-  - [ ] VPN login failures.
-  - [ ] Password reset loops.
-  - [ ] Printer queue stalls.
-- [ ] Add at least one false-positive trap where similar symptoms have different root causes.
-- [ ] Give every ticket a stable ID, affected system, symptom, resolver action, timestamp, and short comment history.
-- [ ] Create `runbooks/` with intentionally stale markdown runbooks for each major cluster.
-- [ ] Create `scripts/` with simple, safe support scripts that never touch production systems.
-- [ ] Create empty or placeholder `kb/` and `reviews/` folders with `.gitkeep` files.
-- [ ] Add `fixtures/expected-clusters.json` describing the expected groupings and the preferred demo pattern.
+- [x] Include at least three repeated issue clusters:
+  - [x] VPN login failures.
+  - [x] Password reset loops.
+  - [x] Printer queue stalls.
+- [x] Add at least one false-positive trap where similar symptoms have different root causes.
+- [x] Give every ticket a stable ID, affected system, symptom, resolver action, timestamp, and short comment history.
+- [x] Create `runbooks/` with intentionally stale markdown runbooks for each major cluster.
+- [x] Create `scripts/` with simple, safe support scripts that never touch production systems.
+- [x] Create empty or placeholder `kb/` and `reviews/` folders with `.gitkeep` files.
+- [x] Add `fixtures/expected-clusters.json` describing the expected groupings and the preferred demo pattern.
 
 Suggested commit: `test: add synthetic service desk fixtures`
 
