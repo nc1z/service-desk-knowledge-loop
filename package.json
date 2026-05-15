@@ -9,6 +9,7 @@
   },
   "scripts": {
     "dev": "vite --host 127.0.0.1",
+    "demo:run": "node scripts/demo-run.mjs",
     "brief:pattern": "node scripts/generate-incident-brief.mjs",
     "cluster:incidents": "node scripts/cluster-incidents.mjs",
     "brief:incident": "node scripts/generate-incident-brief.mjs",
@@ -20,6 +21,7 @@
     "handoff:review": "node scripts/generate-reviewer-handoff.mjs",
     "ingest:tickets": "node scripts/ingest-tickets.mjs",
     "preview": "vite preview --host 127.0.0.1",
+    "reset:demo": "node scripts/reset-demo.mjs",
     "test": "node --test",
     "validate:runbooks": "node scripts/validate-runbooks.mjs",
     "typecheck": "tsc --noEmit",

@@ -18,18 +18,14 @@ flowchart LR
 
 ```bash
 pnpm install
-pnpm ingest:tickets
-pnpm cluster:incidents
-pnpm brief:pattern
-pnpm validate:runbooks
-pnpm check:vpn-demo
-pnpm draft:kb
-pnpm handoff:review
-pnpm eval:poc
+pnpm reset:demo
+pnpm demo:run
 pnpm test
 pnpm dev
 pnpm build
 pnpm preview
-```
 
-TODO: add supported local commands for full demo simulation, reset, and replay.
+# Hand-authored fixtures: tickets/, runbooks/, scripts/
+# Generated outputs: generated/, reviews/, kb/
+# If setup fails, rerun pnpm install. If preview fails, run pnpm build first.
+```

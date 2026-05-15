@@ -171,12 +171,12 @@ Suggested commit: `test: add service desk knowledge loop evals`
 
 Goal: make the POC easy to rerun during demos.
 
-- [ ] Add a reset command that restores generated demo files to fixture state.
-- [ ] Add a demo-run command that executes ingest, clustering, brief generation, runbook/script updates, KB draft, and handoff.
-- [ ] Make generated artifacts deterministic where practical.
-- [ ] Document which files are generated versus hand-authored fixtures.
-- [ ] Add a short troubleshooting section for common local setup issues.
-- [ ] Verify a clean reset followed by a demo run produces the expected outputs.
+- [x] Add a reset command that restores generated demo files to fixture state.
+- [x] Add a demo-run command that executes ingest, clustering, brief generation, runbook/script updates, KB draft, and handoff.
+- [x] Make generated artifacts deterministic where practical.
+- [x] Document which files are generated versus hand-authored fixtures.
+- [x] Add a short troubleshooting section for common local setup issues.
+- [x] Verify a clean reset followed by a demo run produces the expected outputs.
 
 Suggested commit: `chore: add reset and demo replay workflow`
 
