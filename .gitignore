@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+coverage/
+
+# Package manager and tool caches
+.npm-cache/
+.pnpm-store/
+.eslintcache
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Generated demo artifacts
+generated/
+reviews/*
+!reviews/.gitkeep
+!reviews/README.md
+kb/*
+!kb/.gitkeep
+!kb/README.md
+
+# OS/editor noise
+.DS_Store
+.idea/
+.vscode/
