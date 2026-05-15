@@ -20,6 +20,7 @@ flowchart LR
 pnpm install
 pnpm reset:demo
 pnpm demo:run
+pnpm verify:acceptance
 pnpm test
 pnpm dev
 pnpm build

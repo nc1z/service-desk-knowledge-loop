@@ -24,6 +24,7 @@
     "reset:demo": "node scripts/reset-demo.mjs",
     "test": "node --test",
     "validate:runbooks": "node scripts/validate-runbooks.mjs",
+    "verify:acceptance": "node scripts/verify-acceptance.mjs",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "format": "prettier --write .",

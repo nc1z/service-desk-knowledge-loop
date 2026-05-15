@@ -198,15 +198,15 @@ Suggested commit: `docs: add enterprise demo narrative`
 
 Goal: confirm the POC satisfies the PRD end to end.
 
-- [ ] A user can run the demo from a local workspace.
-- [ ] The demo produces one updated runbook.
-- [ ] The demo produces one safe support script change.
-- [ ] The demo produces one KB draft.
-- [ ] The demo produces one reviewer handoff.
-- [ ] The animated monitoring view clearly shows the end-to-end knowledge loop.
-- [ ] The POC can be reset by restoring fixture files.
-- [ ] No real credentials, real tickets, or production systems are required.
-- [ ] Mermaid diagrams in documentation parse successfully.
-- [ ] Tests and evals pass from a clean checkout.
+- [x] A user can run the demo from a local workspace.
+- [x] The demo produces one updated runbook.
+- [x] The demo produces one safe support script change.
+- [x] The demo produces one KB draft.
+- [x] The demo produces one reviewer handoff.
+- [x] The animated monitoring view clearly shows the end-to-end knowledge loop.
+- [x] The POC can be reset by restoring fixture files.
+- [x] No real credentials, real tickets, or production systems are required.
+- [x] Mermaid diagrams in documentation parse successfully.
+- [x] Tests and evals pass from a clean checkout.
 
 Suggested commit: `chore: verify poc acceptance criteria`
