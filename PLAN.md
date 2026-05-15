@@ -82,13 +82,13 @@ Suggested commit: `feat: generate incident pattern brief`
 
 Goal: simulate Codex CLI making a scoped repository edit to improve stale operational documentation.
 
-- [ ] Map the selected incident cluster to the matching runbook.
-- [ ] Update the runbook with current symptoms, triage steps, resolver actions, and escalation notes.
-- [ ] Add an evidence section that cites the relevant ticket IDs or filenames.
-- [ ] Avoid unrelated runbook rewrites or style churn.
-- [ ] Add validation for required runbook sections.
-- [ ] Record the changed runbook path in the review output.
-- [ ] Add tests or snapshot checks for the generated runbook content.
+- [x] Map the selected incident cluster to the matching runbook.
+- [x] Update the runbook with current symptoms, triage steps, resolver actions, and escalation notes.
+- [x] Add an evidence section that cites the relevant ticket IDs or filenames.
+- [x] Avoid unrelated runbook rewrites or style churn.
+- [x] Add validation for required runbook sections.
+- [x] Record the changed runbook path in the review output.
+- [x] Add tests or snapshot checks for the generated runbook content.
 
 Suggested commit: `feat: update runbook from incident evidence`
 

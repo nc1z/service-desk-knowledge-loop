@@ -5,7 +5,7 @@
 - Format version: 1
 - Selected cluster: vpn-login-failures (VPN login failures); confidence 100%; recurrence count 4. Sources: INC-2026-0001/INC-2026-0001-vpn-token-refresh.md, INC-2026-0002/INC-2026-0002-vpn-token-refresh.md, INC-2026-0003/INC-2026-0003-vpn-token-refresh.md, INC-2026-0004/INC-2026-0004-vpn-token-refresh.md.
 - Cluster method: affected system, normalized symptom, and primary resolver-action signal. Sources: INC-2026-0001-vpn-token-refresh.md, INC-2026-0002-vpn-token-refresh.md, INC-2026-0003-vpn-token-refresh.md, INC-2026-0004-vpn-token-refresh.md.
-- Suspected stale documentation reviewed: runbooks/vpn-login-failures.md; last reviewed 2025-10-15.
+- Suspected stale documentation reviewed: runbooks/vpn-login-failures.md; last reviewed 2026-05-15.
 
 ## Facts
 
@@ -26,11 +26,13 @@
 
 ## Suspected Stale Documentation
 
-- runbooks/vpn-login-failures.md declares "intentionally stale fixture for the local POC" and is therefore treated as suspected stale documentation. Source: runbooks/vpn-login-failures.md.
-- Known gap: Does not separate failures before MFA from failures after MFA approval. Source: runbooks/vpn-login-failures.md.
-- Known gap: Does not mention stale authentication tokens after MFA token refresh. Source: runbooks/vpn-login-failures.md.
-- Known gap: Does not include a safe way to collect demo evidence before escalation. Source: runbooks/vpn-login-failures.md.
-- Known gap: Does not warn agents to keep ISP or UDP tunnel issues out of the token-refresh cluster. Source: runbooks/vpn-login-failures.md.
+- runbooks/vpn-login-failures.md declares "updated from synthetic incident evidence for the local POC". Source: runbooks/vpn-login-failures.md.
+- No explicit known-gap bullets were found. Source: runbooks/vpn-login-failures.md.
+
+## Runbook Update
+
+- Changed runbook path: runbooks/vpn-login-failures.md. Source: runbooks/vpn-login-failures.md.
+- Required runbook section validation: passed. Source: runbooks/vpn-login-failures.md.
 
 ## False-Positive Guardrail
 

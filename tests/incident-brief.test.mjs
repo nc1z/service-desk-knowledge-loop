@@ -46,6 +46,7 @@ test("defines the incident-pattern brief review format", () => {
     "Facts",
     "Ticket Evidence",
     "Suspected Stale Documentation",
+    "Runbook Update",
     "False-Positive Guardrail",
     "Recommended Next Actions",
     "Review Boundary",
@@ -66,7 +67,9 @@ test("generates a cited brief for the selected recurring cluster", async () => {
   assert.match(brief, /## Facts[\s\S]*## Ticket Evidence/);
   assert.match(brief, /## Recommended Next Actions[\s\S]*## Review Boundary/);
   assert.match(brief, /runbooks\/vpn-login-failures\.md/);
-  assert.match(brief, /Does not separate failures before MFA/);
+  assert.match(brief, /updated from synthetic incident evidence/);
+  assert.match(brief, /Changed runbook path: runbooks\/vpn-login-failures\.md/);
+  assert.match(brief, /Required runbook section validation: passed/);
   assert.match(brief, /INC-2026-0013/);
   assert.match(brief, /vpn-false-positive-network\.md/);
   assert.match(brief, /do not create KB drafts, handoff packets/);

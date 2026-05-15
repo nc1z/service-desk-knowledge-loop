@@ -1,6 +1,8 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
+import { validateRunbookMarkdown } from "../runbooks/validate.mjs";
+
 export const incidentPatternBriefFormat = {
   schemaVersion: 1,
   requiredSections: [
@@ -8,6 +10,7 @@ export const incidentPatternBriefFormat = {
     "Facts",
     "Ticket Evidence",
     "Suspected Stale Documentation",
+    "Runbook Update",
     "False-Positive Guardrail",
     "Recommended Next Actions",
     "Review Boundary",
@@ -42,6 +45,7 @@ export async function loadDocumentationEvidence(repoRoot, cluster) {
   return {
     path: relativePath,
     filename: path.basename(relativePath),
+    validation: validateRunbookMarkdown(raw),
     ...summarizeRunbook(raw),
   };
 }
@@ -120,6 +124,10 @@ ${clusterTickets.map(formatTicketEvidenceRow).join("\n")}
 
 ${formatDocumentationEvidence(documentation, knownGaps)}
 
+## Runbook Update
+
+${formatRunbookUpdate(documentation)}
+
 ## False-Positive Guardrail
 
 ${falsePositiveNotes}
@@ -162,8 +170,8 @@ function formatDocumentationEvidence(documentation, knownGaps) {
   }
 
   const statusLine = documentation.status
-    ? `- ${documentation.path} declares "${documentation.status}" and is therefore treated as suspected stale documentation. Source: ${documentation.path}.`
-    : `- ${documentation.path} is treated as suspected stale documentation for this selected cluster. Source: ${documentation.path}.`;
+    ? `- ${documentation.path} declares "${documentation.status}". Source: ${documentation.path}.`
+    : `- ${documentation.path} was reviewed for this selected cluster. Source: ${documentation.path}.`;
 
   if (knownGaps.length === 0) {
     return `${statusLine}\n- No explicit known-gap bullets were found. Source: ${documentation.path}.`;
@@ -174,6 +182,24 @@ function formatDocumentationEvidence(documentation, knownGaps) {
     .join("\n");
 
   return `${statusLine}\n${gapLines}`;
+}
+
+function formatRunbookUpdate(documentation) {
+  if (!documentation) {
+    return "- Changed runbook path: no matching runbook file. Source: selected cluster metadata.";
+  }
+
+  const validation = documentation.validation;
+  const validationLine = validation?.ok
+    ? `- Required runbook section validation: passed. Source: ${documentation.path}.`
+    : `- Required runbook section validation: failed (${validation?.errors.join(
+        " ",
+      )}). Source: ${documentation.path}.`;
+
+  return [
+    `- Changed runbook path: ${documentation.path}. Source: ${documentation.path}.`,
+    validationLine,
+  ].join("\n");
 }
 
 function formatFalsePositiveNotes(falsePositiveTraps, ticketsById, cluster) {

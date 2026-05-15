@@ -16,6 +16,7 @@
     "ingest:tickets": "node scripts/ingest-tickets.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "test": "node --test",
+    "validate:runbooks": "node scripts/validate-runbooks.mjs",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "format": "prettier --write .",

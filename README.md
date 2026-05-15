@@ -21,6 +21,7 @@ pnpm install
 pnpm ingest:tickets
 pnpm cluster:incidents
 pnpm brief:pattern
+pnpm validate:runbooks
 pnpm test
 pnpm dev
 pnpm build
@@ -28,8 +29,3 @@ pnpm preview
 ```
 
 TODO: add supported local commands for full demo simulation, reset, and replay.
-
-## Current Demo Artifacts
-
-- `generated/incident-clusters.json` is produced by `pnpm cluster:incidents` or `pnpm brief:pattern`.
-- `reviews/incident-pattern-brief-vpn-login-failures.md` is the Phase 4 sample review brief for the selected demo cluster.

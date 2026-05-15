@@ -27,6 +27,7 @@ reviews/*
 !reviews/README.md
 !reviews/incident-pattern-brief-vpn-login-failures.md
 !reviews/incident-pattern-brief-*.md
+!reviews/runbook-update-record.md
 kb/*
 !kb/.gitkeep
 !kb/README.md
