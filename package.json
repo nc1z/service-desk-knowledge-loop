@@ -9,6 +9,7 @@
   },
   "scripts": {
     "dev": "vite --host 127.0.0.1",
+    "cluster:incidents": "node scripts/cluster-incidents.mjs",
     "build": "tsc --noEmit && vite build",
     "ingest:tickets": "node scripts/ingest-tickets.mjs",
     "preview": "vite preview --host 127.0.0.1",

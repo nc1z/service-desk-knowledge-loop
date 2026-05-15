@@ -54,13 +54,13 @@ Suggested commit: `feat: ingest synthetic incident tickets`
 
 Goal: group incidents by practical support signals and select one high-confidence recurring pattern.
 
-- [ ] Implement grouping by symptom, affected system, resolver action, and recurrence count.
-- [ ] Generate cluster summaries with ticket IDs and source filenames.
-- [ ] Rank clusters by confidence, recurrence count, and evidence quality.
-- [ ] Select one high-confidence recurring pattern for the demo run.
-- [ ] Ensure the false-positive trap is not merged into the wrong cluster.
-- [ ] Save cluster output to a deterministic local artifact.
-- [ ] Add tests against `fixtures/expected-clusters.json`.
+- [x] Implement grouping by symptom, affected system, resolver action, and recurrence count.
+- [x] Generate cluster summaries with ticket IDs and source filenames.
+- [x] Rank clusters by confidence, recurrence count, and evidence quality.
+- [x] Select one high-confidence recurring pattern for the demo run.
+- [x] Ensure the false-positive trap is not merged into the wrong cluster.
+- [x] Save cluster output to a deterministic local artifact.
+- [x] Add tests against `fixtures/expected-clusters.json`.
 
 Suggested commit: `feat: identify recurring incident patterns`
 

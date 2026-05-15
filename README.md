@@ -19,6 +19,7 @@ flowchart LR
 ```bash
 pnpm install
 pnpm ingest:tickets
+pnpm cluster:incidents
 pnpm test
 pnpm dev
 pnpm build
