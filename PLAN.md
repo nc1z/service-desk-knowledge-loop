@@ -22,7 +22,7 @@ Suggested commit: `chore: scaffold service desk knowledge loop poc`
 
 Goal: create synthetic enterprise-like inputs that make the demo repeatable without using real tickets or credentials.
 
-- [ ] Create `tickets/` with 12-20 synthetic incident tickets.
+- [x] Create `tickets/` with 12-20 synthetic incident tickets.
 - [ ] Include at least three repeated issue clusters:
   - [ ] VPN login failures.
   - [ ] Password reset loops.
