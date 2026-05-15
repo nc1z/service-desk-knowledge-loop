@@ -110,13 +110,13 @@ Suggested commit: `feat: patch safe support script for recurring issue`
 
 Goal: create a service-desk-readable article from the updated runbook and script behavior.
 
-- [ ] Define the KB draft template.
-- [ ] Generate a KB article under `kb/` for the selected recurring issue.
-- [ ] Include symptoms, likely cause, agent steps, user-facing wording, escalation triggers, and related runbook/script links.
-- [ ] Keep production actions and auto-publish claims out of the article.
-- [ ] Make the article understandable to a service desk agent.
-- [ ] Include ticket evidence references without exposing personal data.
-- [ ] Add a snapshot or content check for the generated KB draft.
+- [x] Define the KB draft template.
+- [x] Generate a KB article under `kb/` for the selected recurring issue.
+- [x] Include symptoms, likely cause, agent steps, user-facing wording, escalation triggers, and related runbook/script links.
+- [x] Keep production actions and auto-publish claims out of the article.
+- [x] Make the article understandable to a service desk agent.
+- [x] Include ticket evidence references without exposing personal data.
+- [x] Add a snapshot or content check for the generated KB draft.
 
 Suggested commit: `feat: draft knowledge base article`
 

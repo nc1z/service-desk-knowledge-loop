@@ -14,6 +14,7 @@
     "brief:incident": "node scripts/generate-incident-brief.mjs",
     "build": "tsc --noEmit && vite build",
     "check:vpn-demo": "node scripts/check-vpn-session-demo.mjs --ticket INC-2026-0001 --stage after-mfa",
+    "draft:kb": "node scripts/generate-kb-draft.mjs",
     "ingest:tickets": "node scripts/ingest-tickets.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "test": "node --test",

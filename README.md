@@ -23,6 +23,7 @@ pnpm cluster:incidents
 pnpm brief:pattern
 pnpm validate:runbooks
 pnpm check:vpn-demo
+pnpm draft:kb
 pnpm test
 pnpm dev
 pnpm build

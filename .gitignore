@@ -32,6 +32,8 @@ reviews/*
 kb/*
 !kb/.gitkeep
 !kb/README.md
+!kb/knowledge-base-draft-template.md
+!kb/vpn-login-failures.md
 
 # OS/editor noise
 .DS_Store
